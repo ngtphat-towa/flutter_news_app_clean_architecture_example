@@ -6,6 +6,7 @@ import 'package:flutter_news_app_clean_architecture_example/features/features.da
 import 'injection_container.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDependencies();
   runApp(const MyApp());
 }
