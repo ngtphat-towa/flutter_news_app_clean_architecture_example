@@ -7,8 +7,8 @@ import 'package:flutter_news_app_clean_architecture_example/features/features.da
 
 class ArticleRepositoryImpl implements ArticleRepository {
   final NewsApiService _newsApiService;
-
-  ArticleRepositoryImpl(this._newsApiService);
+  final AppDatabase _appDatabase;
+  ArticleRepositoryImpl(this._newsApiService, this._appDatabase);
 
   @override
   Future<DataState<List<ArticleModel>>> getNewsArticles() async {
@@ -34,20 +34,19 @@ class ArticleRepositoryImpl implements ArticleRepository {
   }
 
   @override
-  Future<List<ArticleModel>> getSavedArticles() {
-    // TODO: implement getSavedArticles
-    throw UnimplementedError();
+  Future<List<ArticleModel>> getSavedArticles() async {
+    return _appDatabase.articleDAO.getArticles();
   }
 
   @override
   Future<void> removeArticle(ArticleEntity article) {
-    // TODO: implement removeArticle
-    throw UnimplementedError();
+    return _appDatabase.articleDAO
+        .deleteArticle(ArticleModel.fromEntity(article));
   }
 
   @override
   Future<void> saveArticle(ArticleEntity article) {
-    // TODO: implement saveArticle
-    throw UnimplementedError();
+    return _appDatabase.articleDAO
+        .insertArticle(ArticleModel.fromEntity(article));
   }
 }
