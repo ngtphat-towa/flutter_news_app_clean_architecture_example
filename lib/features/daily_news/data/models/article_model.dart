@@ -1,29 +1,19 @@
 import 'package:floor/floor.dart';
-
+import 'package:flutter_news_app_clean_architecture_example/features/daily_news/domain/entities/article_entity.dart';
 import '../../../../core/constants/constants.dart';
-import '../../domain/entities/article.dart';
 
 @Entity(tableName: 'article', primaryKeys: ['id'])
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
-    int? id,
-    String? author,
-    String? title,
-    String? description,
-    String? url,
-    String? urlToImage,
-    String? publishedAt,
-    String? content,
-  }) : super(
-          id: id,
-          author: author,
-          title: title,
-          description: description,
-          url: url,
-          urlToImage: urlToImage,
-          publishedAt: publishedAt,
-          content: content,
-        );
+    super.id,
+    super.author,
+    super.title,
+    super.description,
+    super.url,
+    super.urlToImage,
+    super.publishedAt,
+    super.content,
+  });
 
   factory ArticleModel.fromJson(Map<String, dynamic> map) {
     return ArticleModel(

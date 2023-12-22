@@ -5,8 +5,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter_news_app_clean_architecture_example/core/constants/constants.dart';
 import 'package:flutter_news_app_clean_architecture_example/core/resources/data_state.dart';
 import 'package:flutter_news_app_clean_architecture_example/features/daily_news/data/datasources/news_api_service.dart';
-import 'package:flutter_news_app_clean_architecture_example/features/daily_news/data/models/article.dart';
-import 'package:flutter_news_app_clean_architecture_example/features/daily_news/domain/entities/article.dart';
+import 'package:flutter_news_app_clean_architecture_example/features/daily_news/data/models/article_model.dart';
+import 'package:flutter_news_app_clean_architecture_example/features/daily_news/domain/entities/article_entity.dart';
 import 'package:flutter_news_app_clean_architecture_example/features/daily_news/domain/repository/article_repository.dart';
 
 class ArticleRepositoryImpl implements ArticleRepository {
