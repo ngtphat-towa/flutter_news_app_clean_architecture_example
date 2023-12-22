@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_news_app_clean_architecture_example/core/constants/constants.dart';
-import 'package:flutter_news_app_clean_architecture_example/features/daily_news/data/models/article_model.dart';
+import 'package:flutter_news_app_clean_architecture_example/core/core.dart';
+import 'package:flutter_news_app_clean_architecture_example/features/features.dart';
+
 import 'package:retrofit/retrofit.dart';
 
 part 'news_api_service.g.dart';

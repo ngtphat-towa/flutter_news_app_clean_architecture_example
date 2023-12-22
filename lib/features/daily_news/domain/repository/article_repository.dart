@@ -1,5 +1,6 @@
-import 'package:flutter_news_app_clean_architecture_example/core/resources/data_state.dart';
-import 'package:flutter_news_app_clean_architecture_example/features/daily_news/domain/entities/article_entity.dart';
+
+import 'package:flutter_news_app_clean_architecture_example/core/core.dart';
+import 'package:flutter_news_app_clean_architecture_example/features/features.dart';
 
 abstract class ArticleRepository {
   // API methods

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_news_app_clean_architecture_example/config/theme/app_themes.dart';
-import 'package:flutter_news_app_clean_architecture_example/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
-import 'package:flutter_news_app_clean_architecture_example/features/daily_news/presentation/pages/daily_news.dart';
-import 'package:flutter_news_app_clean_architecture_example/injection_container.dart';
+import 'package:flutter_news_app_clean_architecture_example/config/config.dart';
+import 'package:flutter_news_app_clean_architecture_example/features/features.dart';
+
+import 'injection_container.dart';
 
 Future<void> main() async {
   await initializeDependencies();
