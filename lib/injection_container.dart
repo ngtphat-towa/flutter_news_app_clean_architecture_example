@@ -15,7 +15,10 @@ Future<void> initializeDependencies() async {
   // Dependencies
   sl.registerSingleton<NewsApiService>(NewsApiService(sl()));
 
-  sl.registerSingleton<ArticleRepository>(ArticleRepositoryImpl(sl(), sl(),));
+  sl.registerSingleton<ArticleRepository>(ArticleRepositoryImpl(
+    sl(),
+    sl(),
+  ));
 
   //UseCases
   sl.registerSingleton<GetArticleUseCase>(GetArticleUseCase(sl()));
@@ -26,7 +29,9 @@ Future<void> initializeDependencies() async {
 
   sl.registerSingleton<RemoveArticleUseCase>(RemoveArticleUseCase(sl()));
 
-
   //Blocs
   sl.registerFactory<RemoteArticlesBloc>(() => RemoteArticlesBloc(sl()));
+
+  sl.registerFactory<LocalArticleBloc>(
+      () => LocalArticleBloc(sl(), sl(), sl()));
 }
